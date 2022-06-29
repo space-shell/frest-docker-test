@@ -1,0 +1,10 @@
+services:
+  deno:
+    image: denoland/deno:latest
+    working_dir: /app
+    restart: unless-stopped
+    command: run -A main.ts
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
